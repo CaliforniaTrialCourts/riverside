@@ -1,4 +1,3 @@
-uuid: 758a0523-039b-48cf-98b2-d03bf517ee99
 langcode: en
 status: true
 dependencies:
@@ -11,16 +10,16 @@ field_name: field_media_image
 entity_type: media
 type: image
 settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
   default_image:
     uuid: null
     alt: ''
     title: ''
     width: null
     height: null
-  target_type: file
-  display_field: false
-  display_default: false
-  uri_scheme: public
 module: image
 locked: false
 cardinality: 1

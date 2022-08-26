@@ -1,4 +1,3 @@
-uuid: 0486a70a-e972-45e6-a0b0-dfa4969b6219
 langcode: en
 status: true
 dependencies:
@@ -14,19 +13,19 @@ bundle: iframe
 mode: default
 content:
   field_aspect_ratio:
+    type: options_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_link:
+    type: link_default
     weight: 0
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
 hidden:
   created: true
   status: true

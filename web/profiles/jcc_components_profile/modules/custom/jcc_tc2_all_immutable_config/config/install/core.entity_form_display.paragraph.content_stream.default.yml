@@ -1,4 +1,3 @@
-uuid: 0920cd29-3376-444e-be73-ef249f4266bd
 langcode: en
 status: true
 dependencies:
@@ -10,38 +9,36 @@ dependencies:
   module:
     - block_field
     - text
-_core:
-  default_config_hash: HpgKjz4dj8WSt-UOL93468_6-cRus-e3Zhl_pPuLFrE
 id: paragraph.content_stream.default
 targetEntityType: paragraph
 bundle: content_stream
 mode: default
 content:
   field_content_stream:
+    type: block_field_default
     weight: 2
+    region: content
     settings:
       plugin_id: ''
       settings: {  }
       configuration_form: full
     third_party_settings: {  }
-    type: block_field_default
-    region: content
   field_heading:
+    type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_lead:
+    type: text_textarea
     weight: 1
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
 hidden:
   created: true
   status: true

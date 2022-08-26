@@ -1,12 +1,10 @@
-uuid: 1db30f8a-220a-4c16-a1d8-4708deda2233
 langcode: en
 status: false
 dependencies: {  }
-_core:
-  default_config_hash: 6_pIms5Yl_uYMQuxNmbiP5j7JwiCpcWcqRzuM_raMGg
 id: local
 label: Local
 description: 'Local '
+weight: 0
 folder: ../config/config-sc-local
 module:
   devel: 0
@@ -20,4 +18,3 @@ graylist:
   - system.performance
 graylist_dependents: true
 graylist_skip_equal: false
-weight: 0

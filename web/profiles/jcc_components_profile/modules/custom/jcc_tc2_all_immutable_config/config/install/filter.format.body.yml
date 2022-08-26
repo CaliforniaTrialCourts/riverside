@@ -1,4 +1,3 @@
-uuid: af389db4-a2e5-4657-b64d-24b05ed5db9a
 langcode: en
 status: true
 dependencies:
@@ -13,8 +12,6 @@ dependencies:
     - glossify_taxonomy
     - linkit
     - media
-_core:
-  default_config_hash: RUsXOPNH65c3DBBy00p2DoWI0zt9bTW6GJQR4V4ZlKQ
 name: Body
 format: body
 weight: -9
@@ -84,14 +81,14 @@ filters:
     weight: 100
     settings:
       default_view_mode: default
-      allowed_media_types:
-        boxcast_stream: boxcast_stream
-        image: image
-        remote_video: remote_video
-        snippet: snippet
       allowed_view_modes:
         container_100_percent: container_100_percent
         container_25_percent: container_25_percent
         container_50_percent: container_50_percent
         container_75_percent: container_75_percent
         full: full
+      allowed_media_types:
+        boxcast_stream: boxcast_stream
+        image: image
+        remote_video: remote_video
+        snippet: snippet

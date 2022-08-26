@@ -1,4 +1,3 @@
-uuid: 8c20b260-a565-40c3-9ded-cabebf11d3c0
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
     - views.view.alerts
   module:
     - viewsreference
-_core:
-  default_config_hash: XbVVCtcJHhe3Vt7i-Y3ysDGGJ5sPwTqqrX3PMfTQr7A
 id: paragraph.views_reference.field_views_reference
 field_name: field_views_reference
 entity_type: paragraph

@@ -1,4 +1,3 @@
-uuid: dc2466c4-4643-42a6-bf93-c6b73c8cc2ed
 langcode: en
 status: true
 dependencies:
@@ -13,8 +12,6 @@ dependencies:
     - node
     - taxonomy
     - user
-_core:
-  default_config_hash: W5MQYyH0VuXmEUtasci4WTQP44OjZ2XvRIeslmR6RQY
 id: news
 label: News
 module: views
@@ -471,6 +468,7 @@ display:
           exposed: false
           expose:
             label: ''
+            field_identifier: sticky
           entity_type: node
           entity_field: sticky
           plugin_id: standard
@@ -485,6 +483,7 @@ display:
           exposed: false
           expose:
             label: ''
+            field_identifier: field_date_value
           granularity: day
           plugin_id: datetime
       title: News

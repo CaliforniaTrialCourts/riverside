@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.media_file_category
+id: taxonomy_term.media_file_category
+target_entity_type_id: taxonomy_term
+target_bundle: media_file_category
+default_langcode: site_default
+language_alterable: false

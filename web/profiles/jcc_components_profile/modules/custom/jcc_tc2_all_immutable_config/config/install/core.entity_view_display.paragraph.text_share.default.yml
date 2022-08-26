@@ -1,4 +1,3 @@
-uuid: f7ab53b0-1a72-4635-ab6a-dee79f5bbfd4
 langcode: en
 status: true
 dependencies:
@@ -13,11 +12,11 @@ bundle: text_share
 mode: default
 content:
   field_text:
-    weight: 0
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 0
     region: content
 hidden:
   search_api_excerpt: true

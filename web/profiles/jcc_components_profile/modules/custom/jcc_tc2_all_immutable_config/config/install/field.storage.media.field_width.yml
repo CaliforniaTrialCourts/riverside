@@ -1,11 +1,8 @@
-uuid: 92c6c868-d97d-4056-81d3-bccf4679b9a5
 langcode: en
 status: true
 dependencies:
   module:
     - media
-_core:
-  default_config_hash: BvPR6HEXDxZJPvb-Cg2blc0XZzup-tdoLl0mMDjO6ow
 id: media.field_width
 field_name: field_width
 entity_type: media

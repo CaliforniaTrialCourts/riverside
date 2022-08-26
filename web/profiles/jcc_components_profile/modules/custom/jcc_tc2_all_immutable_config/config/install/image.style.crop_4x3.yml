@@ -1,4 +1,3 @@
-uuid: 144c078f-8af4-4203-addc-bb0c3421c6ab
 langcode: en
 status: true
 dependencies:
@@ -6,8 +5,6 @@ dependencies:
     - crop.type.crop_4x3
   module:
     - crop
-_core:
-  default_config_hash: Lpsu2XXxdf6coeWV9b9PdQTk646Eb2d6rE5aT5Ztb2Y
 name: crop_4x3
 label: 'Crop 4x3'
 effects:

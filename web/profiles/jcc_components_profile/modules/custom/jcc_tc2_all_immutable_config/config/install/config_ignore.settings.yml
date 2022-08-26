@@ -29,5 +29,3 @@ ignored_config_entities:
   - protected_pages.settings
   - 'xmlsitemap.xmlsitemap.*'
   - 'xlsx.xlsx.*'
-_core:
-  default_config_hash: tjD1Kio4j_OpJ6dbvHOKEwjytrriGRkVVHLArVXx9WI

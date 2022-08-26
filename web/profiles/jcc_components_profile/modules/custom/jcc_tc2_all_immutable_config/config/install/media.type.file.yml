@@ -1,4 +1,3 @@
-uuid: 96ef06fb-82b4-4ab5-95a9-4d3c7f5c0344
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
 third_party_settings:
   crop:
     image_field: _none
-_core:
-  default_config_hash: _dqGMYn58nKHZ8ADXzAbnBazv_lDmCUUUr5yiA08FKA
 id: file
 label: File
 description: 'Upload a .pdf file.'

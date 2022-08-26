@@ -169,11 +169,11 @@ jobs:
                     - project
                     - .cache/Cypress
 
-            - run:
-                name: VRT set base images
-                command: .circleci/scripts/cypress-ci.sh -b << parameters.site >>
-                no_output_timeout: 10m
-                working_directory: ''
+#            - run:
+#                name: VRT set base images
+#                command: .circleci/scripts/cypress-ci.sh -b << parameters.site >>
+#                no_output_timeout: 10m
+#                working_directory: ''
 
             - run:
                 name: Run CI specs.
@@ -216,7 +216,6 @@ workflows:
                 - stage
                 - master
                 - /^epic-.*/
-
 experimental:
   notify:
     branches:

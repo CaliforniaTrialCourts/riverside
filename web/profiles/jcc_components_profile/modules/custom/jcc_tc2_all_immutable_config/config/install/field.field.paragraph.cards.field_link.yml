@@ -1,4 +1,3 @@
-uuid: 2b368228-b310-4534-ae06-07f8ecf1848f
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.cards
   module:
     - link
-_core:
-  default_config_hash: rKQtp12QG4l716GZKbtpCWAYwaSf0VBWDf5vaO295bk
 id: paragraph.cards.field_link
 field_name: field_link
 entity_type: paragraph
@@ -20,6 +17,6 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  link_type: 17
   title: 2
+  link_type: 17
 field_type: link

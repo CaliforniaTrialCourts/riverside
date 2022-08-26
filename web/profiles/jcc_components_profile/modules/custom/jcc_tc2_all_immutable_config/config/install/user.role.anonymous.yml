@@ -1,9 +1,10 @@
-uuid: 74593582-6e27-4d88-aa62-af832b31123d
 langcode: en
 status: true
-dependencies: {  }
-_core:
-  default_config_hash: kxAcDWYbRA5_iXxXKPi-w8x6P-AeKOtDqBPQH027wQc
+dependencies:
+  module:
+    - media
+    - protected_pages
+    - system
 id: anonymous
 label: 'Anonymous user'
 weight: -4

@@ -1,4 +1,3 @@
-uuid: fd06276b-c4e6-4a5c-80b5-518c2c8b017e
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - system
   theme:
     - jcc_components
-_core:
-  default_config_hash: sOJ3JqaXeoqCnH0X5QxiOLupb5py48fRs8pOCoMpouw
 id: breadcrumbs
 theme: jcc_components
 region: navigation
@@ -18,14 +15,14 @@ plugin: system_breadcrumb_block
 settings:
   id: system_breadcrumb_block
   label: Breadcrumbs
-  provider: system
   label_display: '0'
+  provider: system
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
-    bundles:
-      alert: alert
-      landing_page: landing_page
     negate: true
     context_mapping:
       node: '@node.node_route_context:node'
+    bundles:
+      alert: alert
+      landing_page: landing_page

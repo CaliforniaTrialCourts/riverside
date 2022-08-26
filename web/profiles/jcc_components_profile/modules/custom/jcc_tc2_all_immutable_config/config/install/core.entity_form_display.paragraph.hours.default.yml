@@ -1,4 +1,3 @@
-uuid: 9fe429b4-ac6b-453d-a4cf-1de78be891ef
 langcode: en
 status: true
 dependencies:
@@ -8,32 +7,30 @@ dependencies:
     - paragraphs.paragraphs_type.hours
   module:
     - office_hours
-_core:
-  default_config_hash: IwtC4iuXrah-upP9bNNH9Hs0hrwT2Fvr5pfo1BtzowI
 id: paragraph.hours.default
 targetEntityType: paragraph
 bundle: hours
 mode: default
 content:
   field_heading:
+    type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_hours:
+    type: office_hours_default
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: office_hours_default
-    region: content
   translation:
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
   status: true

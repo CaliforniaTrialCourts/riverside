@@ -1,4 +1,3 @@
-uuid: 546ddc96-eddf-4916-912a-8fd15473153d
 langcode: en
 status: true
 dependencies:
@@ -18,14 +17,14 @@ plugin: webform_block
 settings:
   id: webform_block
   label: 'Survey Webform'
-  provider: webform
   label_display: '0'
+  provider: webform
   webform_id: was_this_helpful
   default_data: ''
   redirect: false
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: true
     context_mapping: {  }
+    pages: '<front>'

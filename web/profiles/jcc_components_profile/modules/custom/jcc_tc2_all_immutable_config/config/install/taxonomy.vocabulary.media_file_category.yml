@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Media file category'
+vid: media_file_category
+description: ''
+weight: 0

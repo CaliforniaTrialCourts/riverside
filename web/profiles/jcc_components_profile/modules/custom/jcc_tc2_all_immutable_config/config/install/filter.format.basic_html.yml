@@ -1,12 +1,9 @@
-uuid: 7a699b1a-ef35-46a9-ba75-ac021f27945c
 langcode: en
 status: true
 dependencies:
   module:
     - editor
     - glossify_taxonomy
-_core:
-  default_config_hash: EWo29X7fzvj88g_agU8cEuTmOt5K3IKVPH764AKpfAk
 name: 'Basic HTML'
 format: basic_html
 weight: -6
