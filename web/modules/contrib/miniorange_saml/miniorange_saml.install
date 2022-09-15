@@ -1,0 +1,33 @@
+<?php
+/**
+ * @file
+ * Installation file for miniOrange SAML Module.
+ */
+use Drupal\miniorange_saml\feedback;
+use Drupal\miniorange_saml\Utilities;
+/**
+ * hook_uninstall not needed.
+ * Configure variables are cleared when module is uninstalled.
+ **/
+
+function miniorange_saml_uninstall() {
+    $drupal_is_cli_command = Utilities::drupal_is_cli();
+    if(!$drupal_is_cli_command)
+    {
+          if(\Drupal::config('miniorange_saml.settings')->get('miniorange_saml_feedback') == '1') {
+               feedback::miniorange_saml_feedback();
+             }
+    }
+
+}
+/**
+ * Implements hook_install().
+ */
+function miniorange_saml_install() {
+  global $base_url;
+  \Drupal::configFactory()->getEditable('miniorange_saml.settings')->set('miniorange_saml_nameid_format','urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified')->save();
+  \Drupal::configFactory()->getEditable('miniorange_saml.settings')->set('miniorange_saml_feedback', '1')->save();
+  \Drupal::configFactory()->getEditable('miniorange_saml.settings')->set('miniorange_saml_email_attribute', 'NameID')->save();
+  \Drupal::configFactory()->getEditable('miniorange_saml.settings')->set('miniorange_saml_username_attribute', 'NameID')->save();
+ // \Drupal::configFactory()->getEditable('miniorange_saml.settings')->set('miniorange_saml_base_url', $base_url)->save();
+}
