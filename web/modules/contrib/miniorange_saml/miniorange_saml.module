@@ -1,0 +1,59 @@
+<?php
+
+use Drupal\Core\Url;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+/* @file
+ *Module file for miniOrange SAML Module.
+ */
+
+function miniorange_saml_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+    $enable_saml_login = \Drupal::config('miniorange_saml.settings')->get('miniorange_saml_enable_login');
+    if($enable_saml_login) {
+        if ($form_id == 'user_login_block' || $form_id == 'user_login_form') {
+          $saml_login_url = Url::fromRoute('miniorange_saml.saml_login')->toString();
+          $idp_name = \Drupal::config('miniorange_saml.settings')->get('miniorange_saml_idp_name');
+          $form['loginurl']= array(array(
+            '#markup' => '<a href="'. $saml_login_url .'">Login using ' . $idp_name . '</a>'
+          ));
+          \Drupal::service('page_cache_kill_switch')->trigger();
+        }
+    }
+}
+
+/**
+ * Implements hook_help().
+ */
+function miniorange_saml_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.miniorange_saml':
+      $url = Url::fromRoute('user.admin_index')->toString();
+      $moduleLink = $url .'/miniorange_saml/idp_setup';
+      $supoortLink = $url .'/miniorange_saml/MiniorageSupport';
+      $configureIDP = $url .'/miniorange_saml/sp_setup';
+
+      $moduleLandingPage = 'https://plugins.miniorange.com/drupal-saml-single-sign-on-sso';
+      $setup_guides = 'https://plugins.miniorange.com/configure-drupal-saml-single-sign-on';
+      $SAML_FAQ = 'https://faq.miniorange.com/kb/drupal/saml-drupal/';
+
+      $output = '';
+      $output .= '<h3>' . t('About <a target="_blank" href="' . $moduleLandingPage . '">[Know more]</a>') . '</h3>';
+      $output .= '<p>' . t('SAML 2.0 SP Single Sign On (SSO) - Service Provider module allows users residing at a SAML 2.0 capable Identity Provider to login to your Drupal site. This module allows your Drupal site to act as a SAML 2.0 Service Provider which can be configured to establish the trust between the Drupal site and various SAML 2.0 supported Identity Providers to securely authenticate the user into the Drupal site.') . '</p>';
+      $output .= '<h3>' . t('Configuration') . '</h3>';
+      $output .= '<p>' . t('Configure miniOrange SAML Service Provider under Configuration » <a target = "_blank" href=" ' . $url . ' ">People</a> » <a target = "_blank" href=" ' . $moduleLink . ' ">miniOrange SAML Service Provider</a>:') . '</p>';
+      $output .= '<p>
+                           <ol>
+                              <li>' . t('Navigate to <a target="_blank" href="' . $configureIDP . '">Service Provider tab </a> of the module and configure your Identity Provider. You can use these setup guides <a target="_blank" href="'. $setup_guides .'">Setup Guides</a>') . '</li>
+                              <li>' . t('Once the configuration is done, please click on the <strong>Test Configuration</strong> button on the same page and confirm configuration is correct.') . '</li>
+                              <li>' . t('If you need any assistance, navigate to <a target = "_blank" href="'. $supoortLink .'">Support tab</a> and submit your query. You can also email us at <a href="mailto:drupalsupport@xecurify.com">drupalsupport@xecurify.com</a> or <a href="mailto:info@xecurify.com">info@xecurify.com</a>') . '</li>
+                           </ol>
+                        </p>';
+      $output .= '<h3>' . t('Setup Guides') . '</h3>';
+      $output .= '<p>' . t('Click <a target="_blank" href="'. $setup_guides .'">here</a> to check out the setup guides for different Identity Providers.') . '</p>';
+
+      $output .= '<h3>' . t('Troubleshoot and FAQ') . '</h3>';
+      $output .= '<p>' . t('Click <a target="_blank" href="'. $SAML_FAQ .'">here</a> to check out the frequently asked questions and their answers.') . '</p>';
+
+      return $output;
+  }
+}

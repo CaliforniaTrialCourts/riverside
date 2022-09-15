@@ -1,0 +1,40 @@
+miniorange_saml.admin:
+  version: VERSION
+  css:
+    layout:
+      css/miniorange_saml.admin.css: {}
+      css/miniorange_saml.module.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+
+miniorange_saml.test:
+  version: VERSION
+  js:
+    js/testconfig.js: {}
+
+miniorange_saml.button:
+  version: VERSION
+  js:
+    js/saml.js: {}
+
+miniorange_saml.Vtour:
+  version: VERSION
+  css:
+      theme:
+        css/mo-card.css: {}
+  js:
+    js/dru_visual_tour.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+
+miniorange_saml_copy.icon:
+  version: VERSION
+  js:
+    js/addCopyIcon.js: {}
+
+miniorange_saml.register:
+  version: VERSION
+  js:
+    js/samlSpRegister.js: {}
