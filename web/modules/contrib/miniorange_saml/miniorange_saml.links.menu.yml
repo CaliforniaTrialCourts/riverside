@@ -1,0 +1,53 @@
+miniorange_saml.test_configuration:
+  route_name: miniorange_saml.test_configuration
+
+miniorange_saml.saml_login:
+  route_name: miniorange_saml.saml_login
+
+miniorange_saml.customer_setup:
+  route_name: miniorange_saml.customer_setup
+  title: 'Register/Login'
+  description: 'Register/Login Tab'
+  parent: miniorange_saml.idp_setup
+
+miniorange_saml.idp_setup:
+  route_name: miniorange_saml.idp_setup
+  title: 'miniOrange SAML Login Configuration'
+  description: 'miniOrange SAML Login Configuration'
+  parent: user.admin_index
+
+miniorange_saml.sp_setup:
+  route_name: miniorange_saml.sp_setup
+  title: 'Service Provider Setup'
+  description: 'Service Provider Setup Tab'
+  parent: miniorange_saml.idp_setup
+
+miniorange_saml.login_options:
+  route_name: miniorange_saml.login_options
+  title: 'Signin'
+  description: 'Signin Tab'
+  parent: miniorange_saml.idp_setup
+
+miniorange_saml.mapping:
+  route_name: miniorange_saml.mapping
+  title: 'Mapping'
+  description: 'Mapping Tab'
+  parent: miniorange_saml.idp_setup
+
+miniorange_saml.advance_settings:
+  route_name: miniorange_saml.advance_settings
+  title: 'Advance Settings'
+  description: 'Advance Settings Tab'
+  parent: miniorange_saml.idp_setup
+
+miniorange_saml.licensing:
+  route_name: miniorange_saml.licensing
+  title: 'Upgrade Plans'
+  description: 'Upgrade Plans Tab'
+  parent: miniorange_saml.idp_setup
+
+miniorange_saml.support:
+    route_name: miniorange_saml.support
+    title: 'Support'
+    description: 'Support Tab'
+    parent: miniorange_saml.idp_setup
