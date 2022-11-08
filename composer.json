@@ -253,6 +253,7 @@
         "drupal/office_hours": "^1.2",
         "drupal/openid_connect": "^1.0@beta",
         "drupal/openid_connect_windows_aad": "^1.1",
+        "drupal/pages_restriction": "1.5",
         "drupal/pantheon_advanced_page_cache": "^1.2",
         "drupal/paragraphs": "^1.11",
         "drupal/password_policy": "^3.0@beta",
@@ -344,7 +345,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "process-timeout": 600,
+        "process-timeout": 900,
         "sort-packages": true,
         "allow-plugins": {
             "composer/installers": true,
