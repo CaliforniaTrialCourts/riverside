@@ -1,4 +1,0 @@
-dependencies:
-  module:
-    - require_revision_log_message
-content_types: {}
