@@ -1,0 +1,20 @@
+enabled: windows_aad
+settings:
+  redirect_url: ''
+  client_id: 8ee422b9-cefc-4d51-87a8-ec853c97ea15
+  client_secret: sk38Q~BDGuTPMFjZEEnikrXzHWlPAs5U1dvPZab1
+  enable_single_sign_out: 0
+  authorization_endpoint_wa: 'https://login.microsoftonline.com/ec39e85c-12bf-4366-868b-b0e2bc0fe1f9/oauth2/authorize'
+  token_endpoint_wa: 'https://login.microsoftonline.com/ec39e85c-12bf-4366-868b-b0e2bc0fe1f9/oauth2/token'
+  map_ad_groups_to_roles: 1
+  group_mapping:
+    method: '1'
+    mappings: "Administrator|850e354f-122e-47a1-920e-b095e29210e3\r\nManager|da56ba69-e866-48a2-a77c-d9da78a90ed6\r\nEditor|12ea9596-058b-4a2b-bf8d-320bf2f96ed8; a963a512-7504-4229-a563-0ac67181d512\r\n"
+    strict: 0
+  userinfo_graph_api_wa: '1'
+  userinfo_endpoint_wa: 'https://example.com/oauth2/UserInfo'
+  userinfo_graph_api_use_other_mails: 0
+  userinfo_update_email: 0
+  hide_email_address_warning: 0
+_core:
+  default_config_hash: 2OQBbEvK2JmsoWkIl2-Xceez9J-W6Ge0JOW_A8yrxPc

@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+langcode: en
+uuid: 71929787-c9e1-4c81-b7dd-bd3c56623368
+name: 'Superior Court of California | County of Riverside'
+mail: no-reply@courtinfo.ca.gov
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/1
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
