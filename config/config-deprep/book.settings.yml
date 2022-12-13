@@ -1,9 +1,0 @@
-_core:
-  default_config_hash: accNPBkjwL4dI8MTOTJareDtFTJRuUIhMauuCbjAWIA
-allowed_types:
-  - book
-  - landing_page
-block:
-  navigation:
-    mode: 'all pages'
-child_type: book
