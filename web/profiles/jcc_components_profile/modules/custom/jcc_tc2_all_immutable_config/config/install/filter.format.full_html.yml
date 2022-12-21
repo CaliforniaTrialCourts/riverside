@@ -1,9 +1,12 @@
+uuid: 563f96f4-04e1-4fc4-9a77-77c0e7f494f5
 langcode: en
 status: true
 dependencies:
   module:
     - glossify_taxonomy
     - linkit
+_core:
+  default_config_hash: 3I-WnUMGP0QuQfxKtsMYSyiOdkgxKhQ7RHlvdug3q0M
 name: 'Full HTML'
 format: full_html
 weight: -4

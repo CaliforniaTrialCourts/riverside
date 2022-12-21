@@ -1,3 +1,4 @@
+uuid: af389db4-a2e5-4657-b64d-24b05ed5db9a
 langcode: en
 status: true
 dependencies:
@@ -12,6 +13,8 @@ dependencies:
     - glossify_taxonomy
     - linkit
     - media
+_core:
+  default_config_hash: 6xPBkvKzmS20KV4qztro6aSg7FoJ3ZFTIqbwjwqsIJE
 name: Body
 format: body
 weight: -9
