@@ -1,3 +1,4 @@
+uuid: ecf6816b-213b-4831-9fea-ad697b7a076f
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - filter.format.snippet
   module:
     - ckeditor
+_core:
+  default_config_hash: 8l8n6Enq_pREwgRD2nBOnjDInFlFDXdZOlKIVuejjdg
 format: snippet
 editor: ckeditor
 settings:

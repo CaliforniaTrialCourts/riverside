@@ -1,3 +1,4 @@
+uuid: 253be3a7-01dc-4b02-af42-9c9291166487
 langcode: en
 status: true
 dependencies:
@@ -56,6 +57,11 @@ third_party_settings:
     multilingual:
       limit_to_content_language: false
       include_language_independent: true
+      specific_languages: {  }
+      use_language_undefined_as_fallback_language: false
+      use_universal_collation: false
+_core:
+  default_config_hash: uTVPzYz_MNspPRSMbA0QirzhD-ZSE_NbewYG2zAXma8
 id: index
 name: Index
 description: ''
@@ -206,11 +212,11 @@ datasource_settings:
       default: true
       selected: {  }
 processor_settings:
-  entity_type: {  }
-  rendered_item: {  }
   add_url: {  }
-  language_with_fallback: {  }
   aggregated_field: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
   solr_date_range: {  }
 tracker_settings:
   default:
