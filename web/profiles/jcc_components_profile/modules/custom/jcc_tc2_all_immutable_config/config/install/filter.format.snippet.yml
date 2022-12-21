@@ -1,9 +1,12 @@
+uuid: 4d2671df-c826-43a1-85bc-a48ac17b722e
 langcode: en
 status: true
 dependencies:
   module:
     - glossify_taxonomy
     - linkit
+_core:
+  default_config_hash: TgXHMufTXiqckMc1fGQuE6EoedJ6X6tOkM9ltU98ggk
 name: Snippet
 format: snippet
 weight: -10
