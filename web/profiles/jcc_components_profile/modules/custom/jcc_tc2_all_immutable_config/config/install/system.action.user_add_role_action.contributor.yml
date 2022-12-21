@@ -1,3 +1,4 @@
+uuid: be288928-2307-487f-ad1b-42e1cc2b5df1
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - user.role.contributor
   module:
     - user
+_core:
+  default_config_hash: 3lbtS6th2fA1uigaMqIaOkZ0zxbVO11QgMnos_BHKhE
 id: user_add_role_action.contributor
 label: 'Add the Contributor role to the selected user(s)'
 type: user
