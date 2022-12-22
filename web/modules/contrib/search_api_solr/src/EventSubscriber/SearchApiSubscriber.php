@@ -2,7 +2,6 @@
 
 namespace Drupal\search_api_solr\EventSubscriber;
 
-use Drupal\search_api\Event\MappingViewsFieldHandlersEvent;
 use Drupal\search_api\Event\SearchApiEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
@@ -17,7 +16,7 @@ class SearchApiSubscriber implements EventSubscriberInterface {
    * @param \Drupal\search_api\Event\MappingViewsFieldHandlersEvent $event
    *   The Search API event.
    */
-  public function onMappingViewsFieldHandlers(MappingViewsFieldHandlersEvent $event) {
+  public function onMappingViewsFieldHandlers($event) {
     $mapping = & $event->getFieldHandlerMapping();
 
     $mapping['solr_text_omit_norms'] =
@@ -34,10 +33,6 @@ class SearchApiSubscriber implements EventSubscriberInterface {
         'id' => 'search_api',
       ],
     ];
-
-    /** @see \Drupal\search_api_solr\SolrFieldManager::buildFieldDefinitionsFromSolr() */
-    /** @see \_search_api_views_get_field_handler_mapping() */
-    $mapping['date'] = $mapping['timestamp'];
   }
 
   /**

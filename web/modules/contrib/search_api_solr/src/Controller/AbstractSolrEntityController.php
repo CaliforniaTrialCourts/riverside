@@ -96,7 +96,7 @@ abstract class AbstractSolrEntityController extends ControllerBase {
    * @throws \Drupal\Core\Entity\EntityMalformedException
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
-  protected function doDisableOnServer(ServerInterface $search_api_server, SolrConfigInterface $solr_entity): RedirectResponse {
+  public function disableOnServer(ServerInterface $search_api_server, SolrConfigInterface $solr_entity) {
     $disabled_key = $solr_entity->getEntityType()->getKey('disabled');
     $backend_config = $search_api_server->getBackendConfig();
     $backend_config[$disabled_key][] = $solr_entity->id();
@@ -120,7 +120,7 @@ abstract class AbstractSolrEntityController extends ControllerBase {
    * @throws \Drupal\Core\Entity\EntityMalformedException
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
-  protected function doEnableOnServer(ServerInterface $search_api_server, SolrConfigInterface $solr_entity): RedirectResponse {
+  public function enableOnServer(ServerInterface $search_api_server, SolrConfigInterface $solr_entity) {
     $disabled_key = $solr_entity->getEntityType()->getKey('disabled');
     $backend_config = $search_api_server->getBackendConfig();
     $backend_config[$disabled_key] = array_values(array_diff($backend_config[$disabled_key], [$solr_entity->id()]));

@@ -252,7 +252,7 @@ class SolrFieldType extends AbstractSolrEntity implements SolrFieldTypeInterface
       $field_type[$type] = $analyzer;
     }
 
-    /* @noinspection PhpComposerExtensionStubsInspection */
+    /** @noinspection PhpComposerExtensionStubsInspection */
     return $pretty ?
       json_encode($field_type, JSON_PRETTY_PRINT | JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT) :
       Json::encode($field_type);
@@ -338,7 +338,7 @@ class SolrFieldType extends AbstractSolrEntity implements SolrFieldTypeInterface
    */
   public function getUnstemmedFieldTypeAsJson(bool $pretty = FALSE) {
     if ($this->unstemmed_field_type) {
-      /* @noinspection PhpComposerExtensionStubsInspection */
+      /** @noinspection PhpComposerExtensionStubsInspection */
       return $pretty ?
         json_encode($this->unstemmed_field_type, JSON_PRETTY_PRINT | JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT) :
         Json::encode($this->unstemmed_field_type);
@@ -388,17 +388,13 @@ class SolrFieldType extends AbstractSolrEntity implements SolrFieldTypeInterface
   }
 
   /**
-   * Serializes a field type as XML fragment as required by Solr.
+   * Serializes a filed type as XML fragment as required by Solr.
    *
    * @param array $field_type
-   *   The filed type array.
    * @param string $additional_label
-   *   An additioanl label to add to the XML fragment.
    * @param bool $add_comment
-   *   Whether to add a comment or not. Default is to add a comment.
    *
    * @return string
-   *   The XML fragment.
    */
   protected function getSubFieldTypeAsXml(array $field_type, string $additional_label = '', bool $add_comment = TRUE) {
     $formatted_xml_string = $this->buildXmlFromArray('fieldType', $field_type);
@@ -503,7 +499,7 @@ class SolrFieldType extends AbstractSolrEntity implements SolrFieldTypeInterface
         // without it in the solrconfig.xml. Due to the fact that we leverage a
         // dynamic field here to enable the language fallback we need to append
         // '*', but not '_*' because we'll never append a field name!
-        'name' => 'spellcheck_' . str_replace('-', '_', $this->field_type_language_code) . '*',
+        'name' => 'spellcheck_' . $this->field_type_language_code . '*',
         'type' => $this->spellcheck_field_type['name'],
         'stored' => TRUE,
         'indexed' => TRUE,
@@ -520,7 +516,6 @@ class SolrFieldType extends AbstractSolrEntity implements SolrFieldTypeInterface
    * Returns the collated field definition.
    *
    * @param int|null $solr_major_version
-   *   Solr major version.
    *
    * @return array|null
    *   The array containing the collated field definition or null if is
@@ -535,14 +530,11 @@ class SolrFieldType extends AbstractSolrEntity implements SolrFieldTypeInterface
         'name' => SearchApiSolrUtility::encodeSolrName('sort' . SolrBackendInterface::SEARCH_API_SOLR_LANGUAGE_SEPARATOR . $this->field_type_language_code) . '_*',
         'type' => $this->collated_field_type['name'],
         'stored' => FALSE,
-        'indexed' => TRUE,
+        'indexed' => version_compare($solr_major_version, '5', '<'),
       ];
 
       if (version_compare($solr_major_version, '5', '>=')) {
-        // @see https://issues.apache.org/jira/browse/SOLR-15712
-        $collated_field['indexed'] = FALSE;
         $collated_field['docValues'] = TRUE;
-        $collated_field['useDocValuesAsStored'] = FALSE;
       }
     }
 

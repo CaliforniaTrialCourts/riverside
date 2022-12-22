@@ -1,3 +1,4 @@
+uuid: fb2f18d9-bf66-43e5-9fc5-57d1951054cf
 langcode: en
 status: true
 dependencies:
@@ -42,11 +43,12 @@ dependencies:
     - node
     - paragraphs
     - path
-    - protected_pages
     - rebuild_cache_access
     - redirect
     - system
     - toolbar
+_core:
+  default_config_hash: hAeBRn8HtK4oW17pMBEF_KlF38FlrQKgnDM3wN3Spro
 id: legal_files
 label: 'Legal & Files'
 weight: -9
@@ -61,9 +63,7 @@ permissions:
   - 'access media_entity_browser_modal entity browser pages'
   - 'access toolbar'
   - 'access user profiles'
-  - 'administer protected pages configuration'
   - 'administer redirects'
-  - 'bypass pages password protection'
   - 'change own username'
   - 'create alert content'
   - 'create boxcast_stream media'

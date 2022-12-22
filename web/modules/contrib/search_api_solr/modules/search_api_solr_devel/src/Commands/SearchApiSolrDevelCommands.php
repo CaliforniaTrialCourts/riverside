@@ -3,7 +3,6 @@
 namespace Drupal\search_api_solr_devel\Commands;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\Core\Extension\ModuleExtensionList;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\search_api\SearchApiException;
 use Drupal\search_api_solr\SearchApiSolrException;
@@ -32,23 +31,19 @@ class SearchApiSolrDevelCommands extends DrushCommands {
    *   The entity type manager.
    * @param \Drupal\Core\Extension\ModuleHandlerInterface $moduleHandler
    *   The module handler.
-   * @param \Symfony\Component\EventDispatcher\EventDispatcherInterface $eventDispatcher
-   *   The event dispatcher.
-   * @param \Drupal\Core\Extension\ModuleExtensionList $module_extension_list
-   *   The module extension list.
    *
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
-  public function __construct(EntityTypeManagerInterface $entityTypeManager, ModuleHandlerInterface $moduleHandler, EventDispatcherInterface $eventDispatcher, ModuleExtensionList $module_extension_list) {
+  public function __construct(EntityTypeManagerInterface $entityTypeManager, ModuleHandlerInterface $moduleHandler, EventDispatcherInterface $eventDispatcher) {
     parent::__construct();
-    $this->commandHelper = new SolrCommandHelper($entityTypeManager, $moduleHandler, $eventDispatcher, $module_extension_list);
+    $this->commandHelper = new SolrCommandHelper($entityTypeManager, $moduleHandler, $eventDispatcher, 'dt');
   }
 
   /**
    * {@inheritdoc}
    */
-  public function setLogger(LoggerInterface $logger): void {
+  public function setLogger(LoggerInterface $logger) {
     parent::setLogger($logger);
     $this->commandHelper->setLogger($logger);
   }

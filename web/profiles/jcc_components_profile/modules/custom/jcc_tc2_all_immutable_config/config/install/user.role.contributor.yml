@@ -1,3 +1,4 @@
+uuid: 1052e2af-dcf0-4398-9073-8c2c7534b3e4
 langcode: en
 status: true
 dependencies:
@@ -46,6 +47,8 @@ dependencies:
     - system
     - taxonomy
     - toolbar
+_core:
+  default_config_hash: iN_I3I3kkj-qA-mWFW5YEOc3rFWyKj9SEdRKp_Kl4UU
 id: contributor
 label: Contributor
 weight: -6

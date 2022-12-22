@@ -1,3 +1,4 @@
+uuid: fa0fbbce-4090-4390-8e29-2320ace17a3c
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - protected_pages
     - system
     - userprotect
+_core:
+  default_config_hash: 6qaZIzpNtGDF_v6krvBrBiYKbb_i1F-mae1L3PISca8
 id: authenticated
 label: 'Authenticated user'
 weight: -3

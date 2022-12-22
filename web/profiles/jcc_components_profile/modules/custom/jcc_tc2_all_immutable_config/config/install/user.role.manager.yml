@@ -1,3 +1,4 @@
+uuid: cced076d-f3fb-49d8-a96a-eb68f44970b8
 langcode: en
 status: true
 dependencies:
@@ -63,6 +64,8 @@ dependencies:
     - webform
     - webform_translation_permissions
     - xlsx
+_core:
+  default_config_hash: IeOi7DsYSDZ_WIyx97EpmSyqq1q0QxevM31Oj6Dccu0
 id: manager
 label: Manager
 weight: -7
@@ -88,7 +91,6 @@ permissions:
   - 'administer hat menu items'
   - 'administer main menu items'
   - 'administer nodes'
-  - 'administer protected pages configuration'
   - 'administer redirects'
   - 'administer shoe menu items'
   - 'administer themes'
@@ -100,7 +102,6 @@ permissions:
   - 'assign editor role'
   - 'assign legal_files role'
   - 'assign manager role'
-  - 'bypass pages password protection'
   - 'change own username'
   - 'create alert content'
   - 'create boxcast_stream media'

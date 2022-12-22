@@ -35,7 +35,7 @@ class SolrFieldTypeTest extends KernelTestBase {
   /**
    * {@inheritdoc}
    */
-  protected static $modules = [
+  public static $modules = [
     'language',
     'search_api',
     'search_api_solr',
@@ -82,9 +82,7 @@ class SolrFieldTypeTest extends KernelTestBase {
 
     foreach ($this->configNames as $config_name) {
       $data = $default_config_storage->read($config_name);
-      if ($data !== FALSE) {
-        $this->assertConfigSchema($typed_config, $config_name, $data);
-      }
+      $this->assertConfigSchema($typed_config, $config_name, $data);
     }
   }
 

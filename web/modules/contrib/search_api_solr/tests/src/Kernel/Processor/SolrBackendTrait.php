@@ -4,6 +4,8 @@ namespace Drupal\Tests\search_api_solr\Kernel\Processor;
 
 use Drupal\search_api\Entity\Server;
 use Drupal\search_api_solr\Utility\SolrCommitTrait;
+use Monolog\Handler\StreamHandler;
+use Monolog\Logger;
 use Symfony\Component\Yaml\Yaml;
 
 defined('SOLR_CLOUD') || define('SOLR_CLOUD', getenv('SOLR_CLOUD') ?: 'false');
@@ -24,7 +26,7 @@ trait SolrBackendTrait {
     $config = '/config/install/search_api.server.solr_search_server' . ('true' === SOLR_CLOUD ? '_cloud' : '') . '.yml';
     $this->server = Server::create(
       Yaml::parse(file_get_contents(
-        \Drupal::service('extension.list.module')->getPath('search_api_solr_test') . $config
+        drupal_get_path('module', 'search_api_solr_test') . $config
       ))
     );
     $this->server->save();
@@ -51,7 +53,7 @@ trait SolrBackendTrait {
   /**
    * {@inheritdoc}
    */
-  protected function tearDown(): void {
+  protected function tearDown() {
     $this->index->clear();
     $this->ensureCommit($this->index);
     parent::tearDown();
