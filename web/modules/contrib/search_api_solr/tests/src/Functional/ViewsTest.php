@@ -23,7 +23,7 @@ class ViewsTest extends SearchApiViewsTest {
    *
    * @var string[]
    */
-  protected static $modules = ['search_api_solr_test'];
+  public static $modules = ['search_api_solr_test'];
 
   /**
    * {@inheritdoc}
@@ -59,8 +59,6 @@ class ViewsTest extends SearchApiViewsTest {
     if (!Utility::isRunningInCli()) {
       \Drupal::state()->set('search_api_use_tracking_batch', FALSE);
     }
-
-    $this->rebuildContainer();
   }
 
   /**

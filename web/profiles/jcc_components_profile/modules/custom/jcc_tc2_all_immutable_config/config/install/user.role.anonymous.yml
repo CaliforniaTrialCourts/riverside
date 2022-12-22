@@ -1,3 +1,4 @@
+uuid: 84b75179-6360-4865-a522-212323a22c3a
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - media
     - protected_pages
     - system
+_core:
+  default_config_hash: ofErA0ToRjjiSaNibQKZeMTfO58yFgHVCKcrY-PGX0U
 id: anonymous
 label: 'Anonymous user'
 weight: -4
