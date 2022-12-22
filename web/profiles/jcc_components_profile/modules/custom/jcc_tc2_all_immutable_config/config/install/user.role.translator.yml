@@ -1,3 +1,4 @@
+uuid: 8d18603b-44cf-43df-b613-a4ae447d7da3
 langcode: en
 status: true
 dependencies:
@@ -50,7 +51,6 @@ dependencies:
     - node
     - paragraphs
     - path
-    - protected_pages
     - rebuild_cache_access
     - redirect
     - scheduler
@@ -60,6 +60,8 @@ dependencies:
     - toolbar
     - webform
     - webform_translation_permissions
+_core:
+  default_config_hash: hwK3mmwN_NcehXJM0LAxBV6a9Rc-xgemoeTrqNA8EP4
 id: translator
 label: Translator
 weight: -6
@@ -83,11 +85,9 @@ permissions:
   - 'administer footer menu items'
   - 'administer main menu items'
   - 'administer nodes'
-  - 'administer protected pages configuration'
   - 'administer redirects'
   - 'administer tmgmt'
   - 'administer webform element access'
-  - 'bypass pages password protection'
   - 'change own username'
   - 'create alert content'
   - 'create boxcast_stream media'

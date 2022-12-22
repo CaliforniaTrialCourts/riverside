@@ -3,8 +3,7 @@
 namespace Drupal\search_api_solr\Controller;
 
 use Drupal\search_api\ServerInterface;
-use Drupal\search_api_solr\SolrFieldTypeInterface;
-use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\search_api_solr\SolrConfigInterface;
 use ZipStream\Option\Archive;
 
 /**
@@ -53,39 +52,37 @@ class SolrFieldTypeController extends AbstractSolrEntityController {
   }
 
   /**
-   * Disables a Solr Field Type on this server.
-   *
-   * @param \Drupal\search_api\ServerInterface $search_api_server
-   *   Search API server.
-   * @param \Drupal\search_api_solr\SolrFieldTypeInterface $solr_field_type
-   *   Solr entity.
-   *
-   * @return \Symfony\Component\HttpFoundation\RedirectResponse
-   *   Redirect response.
-   *
-   * @throws \Drupal\Core\Entity\EntityMalformedException
-   * @throws \Drupal\Core\Entity\EntityStorageException
-   */
-  public function disableOnServer(ServerInterface $search_api_server, SolrFieldTypeInterface $solr_field_type): RedirectResponse {
-    return $this->doDisableOnServer($search_api_server, $solr_field_type);
-  }
-
-  /**
-   * Enables a Solr Field Type on this server.
+   * Disables a Solr Entity on this server.
    *
    * @param \Drupal\search_api\ServerInterface $search_api_server
    *   Search API server.
    * @param \Drupal\search_api_solr\SolrConfigInterface $solr_field_type
-   *   Solr entity.
+   *   Solr field type.
    *
    * @return \Symfony\Component\HttpFoundation\RedirectResponse
    *   Redirect response.
    *
-   * @throws \Drupal\Core\Entity\EntityMalformedException
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
-  public function enableOnServer(ServerInterface $search_api_server, SolrFieldTypeInterface $solr_field_type): RedirectResponse {
-    return $this->doEnableOnServer($search_api_server, $solr_field_type);
+  public function disableOnServer(ServerInterface $search_api_server, SolrConfigInterface $solr_field_type) {
+    return parent::disableOnServer($search_api_server, $solr_field_type);
+  }
+
+  /**
+   * Enables a Solr Entity on this server.
+   *
+   * @param \Drupal\search_api\ServerInterface $search_api_server
+   *   Search API server.
+   * @param \Drupal\search_api_solr\SolrConfigInterface $solr_field_type
+   *   Solr field type.
+   *
+   * @return \Symfony\Component\HttpFoundation\RedirectResponse
+   *   Redirect response.
+   *
+   * @throws \Drupal\Core\Entity\EntityStorageException
+   */
+  public function enableOnServer(ServerInterface $search_api_server, SolrConfigInterface $solr_field_type) {
+    return parent::enableOnServer($search_api_server, $solr_field_type);
   }
 
 }

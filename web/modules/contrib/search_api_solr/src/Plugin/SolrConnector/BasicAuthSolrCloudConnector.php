@@ -17,11 +17,4 @@ class BasicAuthSolrCloudConnector extends StandardSolrCloudConnector {
 
   use BasicAuthTrait;
 
-  /**
-   * {@inheritdoc}
-   */
-  public function isTrustedContextSupported() {
-    return TRUE;
-  }
-
 }

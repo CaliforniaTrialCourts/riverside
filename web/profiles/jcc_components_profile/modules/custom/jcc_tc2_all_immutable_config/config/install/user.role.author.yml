@@ -1,3 +1,4 @@
+uuid: 4bb334b1-79df-4642-ba43-29570886e845
 langcode: en
 status: true
 dependencies:
@@ -42,11 +43,12 @@ dependencies:
     - node
     - paragraphs
     - path
-    - protected_pages
     - rebuild_cache_access
     - redirect
     - system
     - toolbar
+_core:
+  default_config_hash: QqTyUzRhiAWIVKuyBqW8Kl_sGbslo2cjChEVjVC83aM
 id: author
 label: Author
 weight: -10
@@ -61,9 +63,7 @@ permissions:
   - 'access media_entity_browser_modal entity browser pages'
   - 'access toolbar'
   - 'access user profiles'
-  - 'administer protected pages configuration'
   - 'administer redirects'
-  - 'bypass pages password protection'
   - 'change own username'
   - 'create alert content'
   - 'create boxcast_stream media'

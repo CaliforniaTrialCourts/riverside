@@ -233,7 +233,7 @@ class StandardSolrCloudConnector extends SolrConnectorPluginBase implements Solr
       }
     }
     catch (\Exception $e) {
-      $this->getLogger()->debug('@exception', ['@exception' => $e->getMessage()]);
+      $this->getLogger()->debug($e->getMessage());
     }
 
     return NULL;
@@ -252,7 +252,7 @@ class StandardSolrCloudConnector extends SolrConnectorPluginBase implements Solr
       $action
         ->setFile($filename)
         ->setName($name)
-        ->setOverwrite(TRUE);
+        ->setOverwrite(true);
       $configsetsQuery->setAction($action);
       $response = $this->solr->configsets($configsetsQuery);
       return $response->getWasSuccessful();

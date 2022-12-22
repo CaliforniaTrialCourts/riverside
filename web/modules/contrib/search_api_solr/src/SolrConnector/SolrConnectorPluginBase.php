@@ -375,13 +375,6 @@ abstract class SolrConnectorPluginBase extends ConfigurablePluginBase implements
   }
 
   /**
-   * {@inheritdoc}
-   */
-  public function isTrustedContextSupported() {
-    return FALSE;
-  }
-
-  /**
    * Returns the Solr server URI.
    */
   protected function getServerUri() {

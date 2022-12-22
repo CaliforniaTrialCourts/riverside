@@ -23,7 +23,7 @@ request_handler:
           name: suggest.dictionary
           VALUE: und
         -
-          name: suggest.count
+          name: suggest.dictionary
           VALUE: '10'
   arr:
     -
