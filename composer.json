@@ -147,7 +147,7 @@
         }
     },
     "require": {
-        "php": ">=7.4",
+        "php": ">=8.1",
         "ckeditor-plugin/a11ychecker": "^1.1.1",
         "ckeditor-plugin/balloonpanel": "^4.14",
         "ckeditor-plugin/templates": "^4.13",
@@ -354,7 +354,8 @@
             "drupal/console-extend-plugin": true,
             "drupal/core-composer-scaffold": true,
             "oomphinc/composer-installers-extender": true,
-            "zaporylie/composer-drupal-optimizations": true
+            "zaporylie/composer-drupal-optimizations": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
     "autoload": {
@@ -412,10 +413,7 @@
                 "Content moderation state entity query support": "https://www.drupal.org/files/issues/2020-09-25/3025164-28.patch",
                 "Add Mayan and Tigrinya language support": "patches/add-mayan-tigrinya-languages-02.patch",
                 "Enable Needs Translation on moderated content.": "https://www.drupal.org/files/issues/2022-02-01/2950626-14.patch"
-            },
-            "drupal/scheduler_content_moderation_integration": {
-                "Undefined offset bug.": "https://www.drupal.org/files/issues/2020-02-19/undefined_offset_node_creation-3077147-12.patch"
-            },
+            },            
             "drupal/devel": {
                 "Fix devel count() warning in php 7.2": "patches/devel-count-warning.patch"
             },
@@ -431,24 +429,14 @@
             "drupal/migrate_process_inline_images": {
                 "Better local file detection": "https://www.drupal.org/files/issues/2020-01-09/migrate_process_inline_images-3105332-2_0.patch",
                 "Core version requirement.": "https://www.drupal.org/files/issues/2020-11-12/core_version_requirement_issue-3182162-2.patch"
-            },
-            "drupal/redirect": {
-                "Allowing wildcards": "https://www.drupal.org/files/issues/2020-09-21/support-for-wildcards-2831605-56.patch",
-                "Redirect source path widget validation prevents creating redirects that vary by query string": "https://www.drupal.org/files/issues/2021-02-19/redirect_source_path-2803105-20.patch"
-            },
+            },            
             "drupal/video_embed_field": {
                 "Allow creation of new video media entities using the Media Browser": "https://www.drupal.org/files/issues/2020-06-20/vef-3039873-media-library-add-32.patch"
-            },
-            "drupal/google_tag": {
-                "Accessibility support for noscript iframe": "https://www.drupal.org/files/issues/2020-01-07/google_tag_iframe_title.patch"
-            },
+            },            
             "drupal/autocomplete_deluxe": {
                 "Allow multiple references with same title": "https://www.drupal.org/files/issues/2019-07-25/3053986_4.patch",
                 "undefined-autocomplete-data-key": "https://www.drupal.org/files/issues/2022-06-09/undefined-autocomplete-data-key-3284962-2.patch"
-            },
-            "drupal/geolocation": {
-                "Fix leaflet gestures loading": "https://www.drupal.org/files/issues/2020-05-27/3143304-2-leaflet-library.patch"
-            },
+            },            
             "drupal/sendgrid_integration": {
                 "Sendgrid email attachments": "https://www.drupal.org/files/issues/2020-12-21/2983707-18.patch"
             },
